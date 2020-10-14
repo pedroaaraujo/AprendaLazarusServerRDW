@@ -1,0 +1,30 @@
+object DMService: TDMService
+  OldCreateOrder = False
+  Encoding = esUtf8
+  Height = 240
+  HorizontalOffset = 0
+  VerticalOffset = 0
+  Width = 320
+  PPI = 96
+  object DWServerEvents1: TDWServerEvents
+    IgnoreInvalidParams = False
+    Events = <    
+      item
+        Routes = [crAll]
+        DWParams = <        
+          item
+            TypeObject = toParam
+            ObjectDirection = odIN
+            ObjectValue = ovString
+            ParamName = 'nome'
+            Encoded = False
+          end>
+        JsonMode = jmDataware
+        Name = 'ola'
+        OnReplyEvent = DWServerEvents1EventsolaReplyEvent
+      end>
+    ContextName = 'servico'
+    left = 80
+    top = 48
+  end
+end
